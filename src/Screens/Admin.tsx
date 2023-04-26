@@ -110,10 +110,10 @@ function Admin() {
         const tempArr = []
         for (let i = 0; i < allpatientData.length; i++) {
             const temp = {};
-            temp["id"] = allpatientData[i].id
-            temp["age"] = allpatientData[i].patientAge
-            temp["city"] = allpatientData[i].patientCity
-            temp["gender"] = allpatientData[i].patientGender
+            temp.id = allpatientData[i].id
+            temp.age = allpatientData[i].patientAge
+            temp.city = allpatientData[i].patientCity
+            temp.gender= allpatientData[i].patientGender
             // temp["totalScore"] = allpatientData[i].patientTotalScore
             // temp["percentageOfDisability"] = allpatientData[i].percentageOfDisability
             // temp["degreeOfAutism"] = allpatientData[i].degreeOfAutism
@@ -245,7 +245,7 @@ function Admin() {
                             {
                                 allpatientData.map((item, index) => {
                                     return (
-                                        <HStack alignItems="center" borderRadius="10" h="50px" bgColor={index % 2 === 0 ? "fuchsia.400" : "fuchsia.200"} justifyContent={"space-between"} >
+                                        <HStack key={index} alignItems="center" borderRadius="10" h="50px" bgColor={index % 2 === 0 ? "fuchsia.400" : "fuchsia.200"} justifyContent={"space-between"} >
                                             <Box shadow={5} p={1} w="25%">
                                                 <Text numberOfLines={1}>{item.patientName}</Text>
                                             </Box>

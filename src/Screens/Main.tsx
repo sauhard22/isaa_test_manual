@@ -99,6 +99,9 @@ const Main = ({ navigation, route }) => {
             city: city,
             gender: gender,
             language: lang,
+            testResults: [],
+            degreeOfAutism: "",
+            percentageOfDisability: "",
         })
     }
 
